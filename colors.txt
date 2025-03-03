@@ -1,0 +1,75 @@
+Here’s a **Shinobi TV** color palette with where you should use each color:  
+
+### 🎨 **Color Palette**  
+| Color | Hex Code | Where to Use |
+|--------|--------|--------------|
+| **Deep Black** | `#0D0D0D` | Background color (main layout, navbar, footer) |
+| **Blood Red** | `#8B0000` | Highlight text, buttons, active links, hover effects |
+| **Burning Orange** | `#FF4500` | Secondary highlights, notifications, call-to-action buttons |
+| **Dark Gray** | `#1A1A1A` | Card backgrounds, modal popups, secondary UI elements |
+| **Steel Gray** | `#3A3A3A` | Borders, dividers, input fields, subtle UI details |
+| **White Smoke** | `#F5F5F5` | Primary text for contrast against dark backgrounds |
+| **Neon Blue** | `#0096FF` | Optional glow effects (hover animations, progress bars) |
+
+---
+
+### 🖌 **Where to Use These Colors?**  
+#### 🔹 **Main UI Elements**  
+- **Background:** `#0D0D0D` (Deep Black) for a dark, immersive look.  
+- **Navbar & Footer:** `#1A1A1A` (Dark Gray) for a slight contrast from the main background.  
+
+#### 🔴 **Text & Typography**  
+- **Headings:** `#F5F5F5` (White Smoke) for good readability.  
+- **Subheadings & Descriptions:** `#3A3A3A` (Steel Gray) for a softer contrast.  
+- **Highlighted Text / Alerts:** `#8B0000` (Blood Red) for warnings, important messages.  
+
+#### 🔥 **Buttons & Interactive Elements**  
+- **Primary Buttons (Play, Watch Now, Subscribe):** `#FF4500` (Burning Orange)  
+- **Secondary Buttons (Cancel, Back, More Info):** `#3A3A3A` (Steel Gray)  
+- **Hover Effect for Buttons:** Change background to `#8B0000` (Blood Red) with a slight glow.  
+
+#### 📌 **Cards & Thumbnails**  
+- **Episode Cards & Video Thumbnails:** `#1A1A1A` (Dark Gray) as a background.  
+- **Borders / Shadows:** `#3A3A3A` (Steel Gray) for depth.  
+
+#### 🔹 **Extras**  
+- **Progress Bar (Episode Watching, Loading Screens):** `#0096FF` (Neon Blue) for a techy cyber feel.  
+- **Glow Effects (On Hover, Focused Inputs):** `#FF4500` (Burning Orange) or `#8B0000` (Blood Red).  
+
+---
+
+### 🎨 **Example CSS Snippet:**
+```css
+body {
+  background-color: #0D0D0D;
+  color: #F5F5F5;
+}
+
+.navbar {
+  background-color: #1A1A1A;
+}
+
+button {
+  background-color: #FF4500;
+  color: #F5F5F5;
+}
+
+button:hover {
+  background-color: #8B0000;
+}
+
+.card {
+  background-color: #1A1A1A;
+  border: 1px solid #3A3A3A;
+}
+
+.progress-bar {
+  background-color: #0096FF;
+}
+```
+
+---
+
+This theme will give **Shinobi TV** a dark, sleek, and anime-inspired **shinobi/ninja feel** with bold accents! ⚔🔥  
+
+Let me know if you need tweaks! 🚀
