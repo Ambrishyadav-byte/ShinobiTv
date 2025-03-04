@@ -1,6 +1,6 @@
 # ShinobiTV - The Ultimate Anime Streaming Experience
 
-![ShinobiTV Logo](./assets/logo.png)  
+![ShinobiTV Logo](./assets/logo.webp)  
 
 ShinobiTV is a modern and sleek anime streaming platform designed for anime lovers. With a dark-themed, responsive UI, it delivers a smooth and immersive viewing experience across PC, mobile, and tablet devices.
 
@@ -23,7 +23,7 @@ ShinobiTV is a modern and sleek anime streaming platform designed for anime love
 ## 🛠 Setup & Installation
 1. **Clone the Repository**
    ```sh
-   git clone https://github.com/your-username/ShinobiTV.git
+   git clone https://github.com/Ambrishyadav-byte/ShinobiTv
    cd ShinobiTV
    ```
 
@@ -58,7 +58,7 @@ We welcome contributions! If you'd like to improve ShinobiTV, follow these steps
 5. Open a **Pull Request**
 
 ## 📧 Contact & Support
-For any questions or issues, feel free to open an issue or contact us at **your-email@example.com**.
+For any questions or issues, feel free to open an issue or contact us at **myself@ambrishbytes.tech**.
 
 ---
 **Enjoy your favorite anime responsibly! 🍥🔥**
