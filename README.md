@@ -1,6 +1,6 @@
 # ShinobiTV - The Ultimate Anime Streaming Experience
 
-![ShinobiTV Logo](./assets/logo.webp)  
+![ShinobiTV Logo](/src/assets/logo.webp)  
 
 ShinobiTV is a modern and sleek anime streaming platform designed for anime lovers. With a dark-themed, responsive UI, it delivers a smooth and immersive viewing experience across PC, mobile, and tablet devices.
 
