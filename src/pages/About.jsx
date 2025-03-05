@@ -1,6 +1,6 @@
 const About = () => {
     return (
-      <div className="p-6 text-white bg-gray-900 min-h-screen">
+      <div className="p-6 text-white bg-[#181A1B] min-h-screen">
         <h1 className="text-4xl font-bold text-center text-red-500">About ShinobiTV</h1>
         <p className="mt-4 text-lg text-gray-300">
           Welcome to <strong>ShinobiTV</strong>! We are an anime streaming platform built for anime lovers, 

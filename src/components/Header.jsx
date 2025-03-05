@@ -3,7 +3,7 @@ import Logo from "../assets/Shinobi.png";
 
 const Header = () => {
   return (
-    <header className="bg-gray-900 text-white p-4 flex justify-between items-center h-[10vh] w-[100vw] sticky z-50 top-0">
+    <header className="bg-[#232525] text-white p-4 flex justify-between items-center h-[10vh] w-[100vw] sticky z-50 top-0">
       <img src={Logo} alt=""className="h-[100%] w-[10vw]" />
       <nav>
         <ul className="flex gap-4">
