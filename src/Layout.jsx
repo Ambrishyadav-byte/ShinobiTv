@@ -7,7 +7,7 @@ const Layout = () => {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-1 ">
-        <Outlet /> {/* This will render different pages */}
+        <Outlet /> 
       </main>
       <Footer />
     </div>

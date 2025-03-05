@@ -8,12 +8,12 @@ import AnimeDetails from "./pages/AnimeDetails";
 const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />  {/* ✅ "/" loads Home */}
-        <Route path="home" element={<Home />} />  {/* ✅ "/home" now works */}
+        <Route index element={<Home />} /> 
+        <Route path="home" element={<Home />} />  
         <Route path="about" element={<About />} />
         <Route path="search" element={<SearchResults />} />
         <Route path="watch" element={<Watch />} />
-        <Route path="anime/:id" element={<AnimeDetails />} /> {/* ✅ Dynamic route */}
+        <Route path="anime/:id" element={<AnimeDetails />} />
       </Route>
     )
   );
