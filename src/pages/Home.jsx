@@ -2,6 +2,7 @@ import React from 'react'
 import banner from '../assets/Banner.png'
 import useFetchAnime from '../Hooks/useFetchAnime';
 import AnimeCard from '../components/AnimeCard';
+import lodingGif from '../assets/Loading.gif'
 
 function Home() {
     const data = useFetchAnime("https://aniwatch-api-delta-three.vercel.app/api/v2/hianime/home");
@@ -24,7 +25,7 @@ function Home() {
                             <AnimeCard key={anime.id} anime={anime} />
                         ))
                     ) : (
-                        <p className="text-white text-2xl">Loading...</p>
+                        <img src={lodingGif} alt="" />
                     )}
                 </div>
             </div>
