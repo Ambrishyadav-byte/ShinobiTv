@@ -1,16 +1,34 @@
 import React from 'react'
+import banner from '../assets/Banner.png'
+import useFetchAnime from '../Hooks/useFetchAnime';
+import AnimeCard from '../components/AnimeCard';
 
 function Home() {
-  return (
-    <div className="Homecomponent h-[100vh] w-[100vw] flex">
-        <div id="left_div" className="h-[100vh] w-[80vw] border-2 border-amber-100">
-            <div id="trending" className='h-[40vh] w-[100%] border-2 border-amber-600'></div>
+    const data = useFetchAnime("https://aniwatch-api-delta-three.vercel.app/api/v2/hianime/home");
+    return (
+        <div className="Homecomponent w-[100vw] flex">
+            <div id="left_div" className="w-[80vw] border-2 border-amber-100">
+                {/* <div
+                    className="banner h-[35vh] w-[100%] mx-auto"
+                    style={{ backgroundImage: `url(${banner})`, backgroundSize: "cover", backgroundPosition: "center" }}
+                >
+                </div> */}
+    
+                <div className="Trending_title border-2 border-amber-300">
+                    <p className='text-4xl text-center text-red-500 p-1'>Trending</p>
+                </div>
+    
+                <div id="trending" className='w-[100%] border-2 border-amber-600 flex flex-wrap justify-center gap-10 items-center'>
+                    {data?.trendingAnimes ? (
+                        data.trendingAnimes.slice(0, 9).map((anime) => (
+                            <AnimeCard key={anime.id} anime={anime} />
+                        ))
+                    ) : (
+                        <p className="text-white text-2xl">Loading...</p>
+                    )}
+                </div>
+            </div>
         </div>
-        <div id="right_div" className='h-[100vh] w-[20vw] border-2 border-amber-300'></div>
-
-    </div>
-  )
-}
+    );}
 
 export default Home
-  
