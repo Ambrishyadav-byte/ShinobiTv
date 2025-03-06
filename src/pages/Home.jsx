@@ -5,7 +5,7 @@ import AnimeCard from '../components/AnimeCard';
 import lodingGif from '../assets/Loading.gif'
 
 function Home() {
-    const data = useFetchAnime("https://aniwatch-api-delta-three.vercel.app/api/v2/hianime/home");
+    const data = useFetchAnime("https://aniwatch-api-g3o3.vercel.app/api/v2/hianime/home");
     return (
         <div className="Homecomponent w-[100vw] flex">
             <div id="left_div" className="w-[100%] border-2 border-amber-100">
