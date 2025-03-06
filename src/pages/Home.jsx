@@ -5,7 +5,7 @@ import AnimeCard from '../components/AnimeCard';
 import loadingGif from '../assets/Loading.gif';
 
 function Home() {
-    const API_URL =" https://aniwatch-api-g3o3.vercel.appgit";
+    const API_URL =" https://aniwatch-api-g3o3.vercel.app";
     const data = useFetchAnime(`${API_URL}/api/v2/hianime/home`);
     
   
