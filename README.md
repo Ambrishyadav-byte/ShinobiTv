@@ -1,22 +1,28 @@
-# ShinobiTV - The Ultimate Anime Streaming Experience
+# ShinobiTV - The Ultimate Anime Streaming Experience (v1)
 
 <img src="/src/assets/logo2.png" alt="ShinobiTV Logo" width="150" height="150">
 
-
 ShinobiTV is a modern and sleek anime streaming platform designed for anime lovers. With a dark-themed, responsive UI, it delivers a smooth and immersive viewing experience across PC, mobile, and tablet devices.
 
+I developed this project out of fun, and this is my first project in React! 🎉
+
 ## 🚀 Features
-- **High-Quality Streaming**: Enjoy your favorite anime with minimal buffering.
-- **Smooth and Responsive UI**: Optimized for PC, mobile, and tablet.
-- **Intelligent Search & Filtering**: Easily find anime based on title, genre, or popularity.
-- **Watch History Tracking** *(Coming soon!)*
-- **Dark-Themed UI**: A visually appealing and easy-on-the-eyes design.
+- **High-Quality Streaming** ✅
+- **Smooth and Responsive Experience** ✅
+- **Subtitles Support** ✅ (Only subtitles because dubs are... well, you know 😆)
 
 ## 📌 Tech Stack
 - **Frontend**: React.js, Tailwind CSS
-- **Backend**: Appwrite (for authentication, database, and API handling)
-- **Database**: Appwrite Collections
 - **Deployment**: Vercel / Netlify
+- **Architecture**: Fully Client-Side Application
+
+## 🏗️ To-Add & Journey
+- [ ] **Search Functionality** (Efficient search with autocomplete & filters) ✅ *(Coming soon!)*
+- [ ] **Advanced Filtering** (Filter anime based on genre, rating, and release year) ✅ *(Coming soon!)*
+- [ ] **Login System** (User authentication & profile management) ✅ *(Coming soon!)*
+- [ ] **Watch History Tracking** (Track watched anime & progress) ✅ *(Coming soon!)*
+- [ ] **User Watchlist** (Save favorite anime for later viewing) ✅ *(Coming soon!)*
+- [ ] **Episode Auto-Play** (Seamless transition to the next episode) ✅ *(Coming soon!)*
 
 ## 📜 Disclaimer
 **ShinobiTV is created for educational purposes only.** The platform does not host or distribute any copyrighted content. All anime available for streaming is sourced from publicly available data online. This project is intended to explore web development, UI design, and optimization techniques while showcasing anime streaming as a concept.
@@ -28,27 +34,20 @@ ShinobiTV is a modern and sleek anime streaming platform designed for anime love
    cd ShinobiTV
    ```
 
-2. **Install Dependencies**
+2. **Host the API**
+   - Clone and host [aniwatch-api](https://github.com/Rajesh4434/aniwatch-api) locally or on Vercel.
+   - Replace the API URL in the project with `API_URL`.
+
+3. **Install Dependencies**
    ```sh
    npm install
    ```
-
-3. **Set Up Appwrite Backend**
-   - Create an Appwrite project and set up the required database collections.
-   - Configure your `.env` file with your Appwrite credentials.
 
 4. **Start the Development Server**
    ```sh
    npm run dev
    ```
-   Open `http://localhost:3000` in your browser.
-
-## 🎨 UI/UX Design
-The design follows a **dark ninja theme**, using colors that match the aesthetics of Shinobi warriors:
-- **Primary Color:** #181A1B (Deep Black)
-- **Accent Color:** #FF4500 (Fiery Red)
-- **Secondary Text:** #A1A1A1 (Muted Grey)
-- **Hover & Highlights:** #1E90FF (Neon Blue)
+   Open `http://localhost:5173` in your browser.
 
 ## 🔗 Contribution
 We welcome contributions! If you'd like to improve ShinobiTV, follow these steps:

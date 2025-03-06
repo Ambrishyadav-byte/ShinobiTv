@@ -5,6 +5,7 @@ import useFetchAnime from "../Hooks/useFetchAnime";
 
 const AnimeDetails = () => {
   let { id } = useParams();
+  const API_URL ="https://aniwatch-api-g3o3.vercel.app";
 
   const [Src, setSrc] = useState(""); // Video source state
   const [epId, setEpId] = useState("");
@@ -15,7 +16,7 @@ const AnimeDetails = () => {
 
   // Fetch all episodes
   const data = useFetchAnime(
-    `https://aniwatch-api-g3o3.vercel.app/api/v2/hianime/anime/${id}/episodes`
+    `${API_URL}/api/v2/hianime/anime/${id}/episodes`
   );
 
   useEffect(() => {
@@ -38,7 +39,7 @@ const AnimeDetails = () => {
     const fetchEpisodeSource = async () => {
       try {
         const response = await fetch(
-          `https://aniwatch-api-g3o3.vercel.app/api/v2/hianime/episode/sources?animeEpisodeId=${epId}&server=hd-1&category=sub`
+          `${API_URL}/api/v2/hianime/episode/sources?animeEpisodeId=${epId}&server=hd-1&category=sub`
         );
         const result = await response.json();
         

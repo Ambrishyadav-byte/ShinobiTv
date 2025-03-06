@@ -5,8 +5,10 @@ import AnimeCard from '../components/AnimeCard';
 import loadingGif from '../assets/Loading.gif';
 
 function Home() {
-    const data = useFetchAnime("https://aniwatch-api-g3o3.vercel.app/api/v2/hianime/home");
-
+    const API_URL ="https://aniwatch-api-g3o3.vercel.app";
+    const data = useFetchAnime(`${API_URL}/api/v2/hianime/home`);
+    
+  
     const sectionStyle = {
         background: "rgba(240, 48, 48, 0.15)",
         boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
