@@ -9,6 +9,7 @@ const AnimeDetails = () => {
   const [Src, setSrc] = useState(""); // Video source state
   const [epId, setEpId] = useState("");
   const [EpisodeData, setEpisodeData] = useState(null);
+  const [subtitles, setSubtitles] = useState([]); // State for subtitles
 
   console.log("Anime ID:", id);
 
@@ -45,10 +46,17 @@ const AnimeDetails = () => {
     
         // ✅ Extract the correct video URL
         const videoUrl = result.data?.sources?.[0]?.url;
-    
+        let subtitleTracks = result.data?.tracks || []; // Extract subtitles
+
+        // ✅ Filter to keep only English subtitles
+        subtitleTracks = subtitleTracks.filter(sub => 
+          sub.label?.toLowerCase().includes("english")
+        );
+
         if (videoUrl) {
           setEpisodeData(result.data);
           setSrc(videoUrl);
+          setSubtitles(subtitleTracks); // ✅ Set only English subtitles
           console.log("Updated Video Source:", videoUrl);
         } else {
           console.error("No valid video URL found in API response");
@@ -62,26 +70,26 @@ const AnimeDetails = () => {
   }, [epId]);
 
   return (
-    <div className="flex flex-col w-full min-h-screen bg-gray-900 text-white">
+    <div className="flex flex-col w-full min-h-screen bg-[#181A1B] text-white">
       {/* Header */}
       <div className="p-4 bg-gray-800 shadow-md text-center">
-        <h1 className="text-3xl font-bold text-amber-400">Enjoy</h1>
+        <h1 className="text-3xl font-bold text-red-500">Enjoy</h1>
       </div>
 
       <div className="Main_container flex flex-col-reverse md:flex-row-reverse gap-4 p-4">
         {/* Left Sidebar - Episode List */}
         <div className="w-full h-[50vh] overflow-scroll md:w-[30%] p-4 rounded-lg bg-gray-800">
-          <h2 className="text-xl font-semibold text-center mb-3 text-amber-300 sticky top-0 bg-gray-800">
+          <h2 className="text-xl font-semibold text-center mb-3 text-red-500 sticky top-0 bg-gray-800">
             Episodes
           </h2>
           <div className="grid grid-cols-5 gap-2">
             {data?.episodes?.map((episode, index) => (
               <div
                 key={episode.episodeId}
-                className="block   border-amber-300 h-[90%] w-[20%] cursor-pointer"
+                className="block border-red-500 h-[90%] w-[20%] cursor-pointer"
                 onClick={() => handleEpisodeClick(episode.episodeId)}
               >
-                <div className="ep w-[45px] h-[45px] bg-amber-500 hover:bg-amber-600 rounded-md border border-amber-300 flex justify-center items-center transition-all">
+                <div className="ep w-[45px] h-[45px] bg-red-500 hover:bg-amber-600 rounded-md border border-amber-300 flex justify-center items-center transition-all">
                   <p className="text-gray-900 font-bold">{index + 1}</p>
                 </div>
               </div>
@@ -91,11 +99,11 @@ const AnimeDetails = () => {
 
         {/* Right Side - Video Player */}
         <div className="w-full md:w-[70%]">
-          <div className=" rounded-lg overflow-hidden shadow-lg">
-            <VideoPlayer className="w-full" src={Src} />
+          <div className="rounded-lg overflow-hidden shadow-lg">
+            <VideoPlayer className="w-full" src={Src} subtitles={subtitles} />
           </div>
           <div className="server w-full h-[15vh] mt-4 p-2 bg-gray-800 rounded-lg">
-            <p className="text-center text-amber-300">Server Selection (Coming Soon)</p>
+            <p className="text-center text-red-500">Server Selection (Coming Soon)</p>
           </div>
         </div>
       </div>
