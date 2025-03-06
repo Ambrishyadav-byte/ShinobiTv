@@ -7,7 +7,7 @@ const Header = () => {
       <img src={Logo} alt=""className="h-[100%] w-[10vw]" />
      
       <nav>
-        <ul className="flex gap-4">
+        <ul className="flex gap-6 text-3xl">
           <li><NavLink  to="/" className={({isActive}) =>
                                         `block py-2 pr-4 pl-3 duration-200 hover:underline ${isActive ? "text-red-500" : "text-white"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }>Home</NavLink></li>
