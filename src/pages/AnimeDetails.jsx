@@ -37,7 +37,7 @@ const AnimeDetails = () => {
     const fetchEpisodeSource = async () => {
       try {
         const response = await fetch(
-          `https://aniwatch-api-g3o3.vercel.app/api/v2/hianime/episode/sources?animeEpisodeId=${epId}&server=hd-1&category=dub`
+          `https://aniwatch-api-g3o3.vercel.app/api/v2/hianime/episode/sources?animeEpisodeId=${epId}&server=hd-1&category=sub`
         );
         const result = await response.json();
         
@@ -68,17 +68,17 @@ const AnimeDetails = () => {
         <h1 className="text-3xl font-bold text-amber-400">Enjoy</h1>
       </div>
 
-      <div className="Main_container flex flex-col md:flex-row gap-4 p-4">
+      <div className="Main_container flex flex-col-reverse md:flex-row-reverse gap-4 p-4">
         {/* Left Sidebar - Episode List */}
-        <div className="w-full h-[50vh] overflow-scroll md:w-[30%] border-2 border-amber-300 p-4 rounded-lg bg-gray-800">
-          <h2 className="text-xl font-semibold text-center mb-4 text-amber-300 sticky top-0 bg-gray-800">
+        <div className="w-full h-[50vh] overflow-scroll md:w-[30%] p-4 rounded-lg bg-gray-800">
+          <h2 className="text-xl font-semibold text-center mb-3 text-amber-300 sticky top-0 bg-gray-800">
             Episodes
           </h2>
           <div className="grid grid-cols-5 gap-2">
             {data?.episodes?.map((episode, index) => (
               <div
-                key={episode.episodeId} // Use unique key
-                className="block border-2 border-amber-300 h-[90%] w-[20%] cursor-pointer"
+                key={episode.episodeId}
+                className="block   border-amber-300 h-[90%] w-[20%] cursor-pointer"
                 onClick={() => handleEpisodeClick(episode.episodeId)}
               >
                 <div className="ep w-[45px] h-[45px] bg-amber-500 hover:bg-amber-600 rounded-md border border-amber-300 flex justify-center items-center transition-all">
@@ -91,10 +91,10 @@ const AnimeDetails = () => {
 
         {/* Right Side - Video Player */}
         <div className="w-full md:w-[70%]">
-          <div className="border-2 border-amber-400 rounded-lg overflow-hidden shadow-lg">
+          <div className=" rounded-lg overflow-hidden shadow-lg">
             <VideoPlayer className="w-full" src={Src} />
           </div>
-          <div className="server w-full h-[15vh] border-2 border-amber-300 mt-4 p-2 bg-gray-800 rounded-lg">
+          <div className="server w-full h-[15vh] mt-4 p-2 bg-gray-800 rounded-lg">
             <p className="text-center text-amber-300">Server Selection (Coming Soon)</p>
           </div>
         </div>

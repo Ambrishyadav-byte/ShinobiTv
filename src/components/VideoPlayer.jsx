@@ -9,12 +9,16 @@ const VideoPlayer = ({ src }) => {
 
   useEffect(() => {
     if (!playerRef.current) {
-      // Initialize player
+      // Initialize Video.js player
       playerRef.current = videojs(videoRef.current, {
         controls: true,
         autoplay: false,
         responsive: true,
         fluid: true,
+        fullscreen: {
+          enabled: true, // ✅ Enable fullscreen mode
+          fallback: true, // ✅ Fallback for unsupported browsers
+        },
       });
     } else {
       // Update video source when `src` changes
@@ -25,10 +29,23 @@ const VideoPlayer = ({ src }) => {
     setCurrentSrc(src);
   }, [src]);
 
+  const handleFullScreen = () => {
+    if (playerRef.current) {
+      playerRef.current.requestFullscreen();
+    }
+  };
+
   return (
     <div>
       {!src && <p>Loading video...</p>}
-      <video ref={videoRef} className="video-js vjs-default-skin vjs-big-play-centered" />
+      <video
+        ref={videoRef}
+        className="video-js vjs-default-skin vjs-big-play-centered"
+        playsInline
+      />
+      <button onClick={handleFullScreen} className="p-2 bg-gray-700 text-white rounded">
+        Fullscreen
+      </button>
     </div>
   );
 };
