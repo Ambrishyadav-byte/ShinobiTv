@@ -37,9 +37,9 @@ const VideoPlayer = ({ src, subtitles = [] }) => {
       playerRef.current.removeRemoteTextTrack(tracks[0]);
     }
 
-    // ✅ Ensure subtitles are added properly
+    // check subtitles are added properly
     subtitles.forEach((sub) => {
-      // ✅ Fix: Check if `sub.label` exists before using it
+    
       if (sub.file && sub.label) {
         const trackElement = playerRef.current.addRemoteTextTrack(
           {

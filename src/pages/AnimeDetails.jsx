@@ -5,7 +5,7 @@ import useFetchAnime from "../Hooks/useFetchAnime";
 
 const AnimeDetails = () => {
   let { id } = useParams();
-  const API_URL ="https://aniwatch-api-g3o3.vercel.app";
+  const API_URL =" PASTE_API_URL";
 
   const [Src, setSrc] = useState(""); // Video source state
   const [epId, setEpId] = useState("");
