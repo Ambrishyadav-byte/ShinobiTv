@@ -9,16 +9,7 @@ function Home() {
     const data = useFetchAnime(`${API_URL}/api/v2/hianime/home`);
 
     // Style object for sections
-    const sectionStyle = {
-        background: "rgba(240, 48, 48, 0.15)",
-        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
-        backdropFilter: "blur(3.5px)",
-        WebkitBackdropFilter: "blur(3.5px)",
-        borderRadius: "10px",
-        border: "1px solid rgba(255, 255, 255, 0.18)",
-        padding: "20px",
-        marginBottom: "20px"
-    };
+  
 
     return (
         <div className="Homecomponent w-[100vw] flex">
@@ -38,7 +29,7 @@ function Home() {
                     const animeDataKey = ["trendingAnimes", "latestEpisodeAnimes", "topUpcomingAnimes", "topAiringAnimes"][index];
 
                     return (
-                        <div key={sectionTitle} style={sectionStyle}>
+                        <div key={sectionTitle}>
                             {/* Section Title */}
                             <p className="text-4xl text-center text-red-500 p-1">{sectionTitle}</p>
                             
