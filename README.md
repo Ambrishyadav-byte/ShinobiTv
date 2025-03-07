@@ -24,6 +24,15 @@ I developed this project out of fun, and this is my first project in React! 🎉
 - [ ] **User Watchlist** (Save favorite anime for later viewing) ✅ *(Coming soon!)*
 - [ ] **Episode Auto-Play** (Seamless transition to the next episode) ✅ *(Coming soon!)*
 
+## 🔧 CORS Bypass Notice
+To avoid CORS errors when fetching video streams, you must update the CORS bypass URL. Follow these steps:
+1. Clone and host [m3u8_proxy-cors](https://github.com/shashstormer/m3u8_proxy-cors) on Vercel.
+2. Replace the CORS URL in the project with your hosted URL.
+3. Example: 
+   ```javascript
+   setSrc("https://your-hosted-cors-url.vercel.app/cors?url=" + videoUrl);
+   ```
+
 ## 📜 Disclaimer
 **ShinobiTV is created for educational purposes only.** The platform does not host or distribute any copyrighted content. All anime available for streaming is sourced from publicly available data online. This project is intended to explore web development, UI design, and optimization techniques while showcasing anime streaming as a concept.
 
