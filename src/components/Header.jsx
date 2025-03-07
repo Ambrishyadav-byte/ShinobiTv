@@ -29,7 +29,7 @@ const Header = () => {
       </button>
 
       {/* Logo (Centered in Mobile, Left in Desktop) */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 md:static md:transform-none">
+      <div className="absolute left-1/2 transform md:static md:transform-none">
         <img src={Logo} alt="Logo" className="h-[7vh] w-auto" />
       </div>
 
@@ -44,7 +44,7 @@ const Header = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `flex items-center gap-2 p-4 md:p-0 duration-200 hover:underline ${
+                `flex items-center gap-2 p-4 md:p-0 duration-200  hover:text-orange-700 ${
                   isActive ? "text-red-500" : "text-white"
                 }`
               }
@@ -56,7 +56,7 @@ const Header = () => {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                `flex items-center gap-2 p-4 md:p-0 duration-200 hover:underline ${
+                `flex items-center gap-2 p-4 md:p-0 duration-200  hover:text-orange-700 ${
                   isActive ? "text-red-500" : "text-white"
                 }`
               }
@@ -69,7 +69,7 @@ const Header = () => {
               href="https://github.com/Ambrishyadav-byte"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 p-4 md:p-0 text-white duration-200 hover:underline hover:text-orange-700"
+              className="flex items-center gap-2 p-4 md:p-0 text-white duration-200  hover:text-orange-700"
             >
               <FaGithub /> GitHub
             </a>

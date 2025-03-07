@@ -12,7 +12,7 @@ const VideoPlayer = ({ src, subtitles = [] }) => {
       // Initialize Video.js player
       playerRef.current = videojs(videoRef.current, {
         controls: true,
-        autoplay: false,
+        autoplay: true, 
         responsive: true,
         fluid: true,
         fullscreen: {
@@ -20,15 +20,15 @@ const VideoPlayer = ({ src, subtitles = [] }) => {
           fallback: true,
         },
         controlBar: {
-          captionsButton: true, // ✅ Ensure captions button is visible
-          subsCapsButton: true, // ✅ Ensure subtitles button is visible
+         captionsButton: true, 
+          subsCapsButton: true, 
         },
       });
     } else {
       // Update video source when `src` changes
       playerRef.current.src([{ src, type: "application/x-mpegURL" }]);
       playerRef.current.load();
-      playerRef.current.play();
+      playerRef.current.play(); // ✅ Auto-play on new source
     }
 
     // Remove old subtitles before adding new ones
@@ -37,29 +37,25 @@ const VideoPlayer = ({ src, subtitles = [] }) => {
       playerRef.current.removeRemoteTextTrack(tracks[0]);
     }
 
-    // check subtitles are added properly
+    // ✅ Add subtitles
     subtitles.forEach((sub) => {
-    
       if (sub.file && sub.label) {
-        const trackElement = playerRef.current.addRemoteTextTrack(
+        playerRef.current.addRemoteTextTrack(
           {
             kind: sub.kind,
             src: sub.file,
-            srclang: sub.label.toLowerCase().slice(0, 2), // Convert label to lang code (en, pt, es)
+            srclang: sub.label.toLowerCase().slice(0, 2),
             label: sub.label,
             default: sub.default || false,
           },
           false
         );
-        console.log("Added subtitle track:", trackElement);
-      } else {
-        console.warn("Skipping invalid subtitle track:", sub);
       }
     });
 
     // ✅ Ensure captions are enabled by default
     if (playerRef.current.textTracks().length > 0) {
-      playerRef.current.textTracks()[0].mode = "showing"; // Force display
+      playerRef.current.textTracks()[0].mode = "showing";
     }
 
     setCurrentSrc(src);
@@ -68,11 +64,7 @@ const VideoPlayer = ({ src, subtitles = [] }) => {
   return (
     <div>
       {!src && <p>Loading video...</p>}
-      <video
-        ref={videoRef}
-        className="video-js vjs-default-skin vjs-big-play-centered"
-        playsInline
-      />
+      <video ref={videoRef} className="video-js vjs-default-skin vjs-big-play-centered" playsInline />
     </div>
   );
 };
