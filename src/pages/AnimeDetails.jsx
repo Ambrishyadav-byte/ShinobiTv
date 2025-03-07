@@ -56,7 +56,7 @@ const AnimeDetails = () => {
 
         if (videoUrl) {
           setEpisodeData(result.data);
-          setSrc(videoUrl);
+          setSrc("https://m3u8-proxy-cors-chi-fawn.vercel.app/cors?url="+videoUrl);
           setSubtitles(subtitleTracks); // ✅ Set only English subtitles
           console.log("Updated Video Source:", videoUrl);
         } else {
