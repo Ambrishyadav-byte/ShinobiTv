@@ -14,11 +14,11 @@ const About = () => {
         <li>✅ High-Quality Streaming</li>
         <li>✅ Smooth and Responsive Experience</li>
         <li>✅ Subtitles Support (Only subtitles because dubs are... well, you know 😆)</li>
+        <li>✅ Search Functionality</li>
       </ul>
       
       <h2 className="text-2xl mt-6 text-red-400">🏗️ To-Add & Journey:</h2>
       <ul className="list-disc pl-6 mt-2 text-gray-300">
-        <li>✅ Search Functionality (Coming soon!)</li>
         <li>✅ Advanced Filtering (Coming soon!)</li>
         <li>✅ Login System (Coming soon!)</li>
         <li>✅ Watch History Tracking (Coming soon!)</li>
