@@ -10,6 +10,7 @@ I developed this project out of fun, and this is my first project in React! 🎉
 - **High-Quality Streaming** ✅
 - **Smooth and Responsive Experience** ✅
 - **Subtitles Support** ✅ (Only subtitles because dubs are... well, you know 😆)
+- **Search Functionality** ✅
 
 ## 📌 Tech Stack
 - **Frontend**: React.js, Tailwind CSS
@@ -17,7 +18,6 @@ I developed this project out of fun, and this is my first project in React! 🎉
 - **Architecture**: Fully Client-Side Application
 
 ## 🏗️ To-Add & Journey
-- [ ] **Search Functionality** (Efficient search with autocomplete & filters) ✅ *(Coming soon!)*
 - [ ] **Advanced Filtering** (Filter anime based on genre, rating, and release year) ✅ *(Coming soon!)*
 - [ ] **Login System** (User authentication & profile management) ✅ *(Coming soon!)*
 - [ ] **Watch History Tracking** (Track watched anime & progress) ✅ *(Coming soon!)*
