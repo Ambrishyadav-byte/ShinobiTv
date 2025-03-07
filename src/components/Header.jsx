@@ -79,7 +79,7 @@ const Header = () => {
         {searchOpen && (
           <div className="absolute right-0 top-12 bg-white p-4 rounded-lg shadow-lg w-[80vw] md:w-[30vw]">
             <div className="flex items-center justify-between mb-2">
-              <h2 className="text-lg font-bold text-gray-800">Search for an Anime</h2>
+              <h2 className="text-lg font-bold text-gray-800">Search for an Anime(Coming soon!)</h2>
               <button onClick={() => setSearchOpen(false)} className="text-red-600 text-xl">
                 <FaTimes />
               </button>
